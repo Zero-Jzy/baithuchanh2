@@ -1,4 +1,6 @@
 var btnSubmit = document.forms[0]["btn-submit"];
+var content='';
+var a;
 btnSubmit.onclick = function () {
     var txtusername = document.forms[0]["username"];
     var msgUsername = txtusername.nextElementSibling;
@@ -16,6 +18,8 @@ btnSubmit.onclick = function () {
         msgUsername.classList.remove("danger-text");
         msgUsername.classList.add("success-text");
         msgUsername.classList.remove("hidden-text");
+        content+='ten nguoi dung:'+txtusername.value+'<br>';
+        a=true;
     }
     var txtpassword = document.forms[0]["phone"];
     var msgpassword = txtpassword.nextElementSibling;
@@ -29,6 +33,8 @@ btnSubmit.onclick = function () {
         msgpassword.classList.remove("danger-text");
         msgpassword.classList.add("success-text");
         msgpassword.classList.remove("hidden-text");
+        content+='sdt nguoi dung:'+txtpassword.value+'<br>';
+        a=true;
     }
     var txtEmail = document.forms[0]["email"];
     var msgEmail = txtEmail.nextElementSibling;
@@ -50,5 +56,10 @@ btnSubmit.onclick = function () {
         msgEmail.classList.remove("danger-text");
         msgEmail.classList.add("success-text");
         msgEmail.classList.remove("hidden-text");
+        content+='email nguoi dung'+txtEmail.value+'<br>';
+        a=true;
+    }
+    if (a===true){
+        document.getElementsByClassName('text2')[0].innerHTML=content;
     }
 };

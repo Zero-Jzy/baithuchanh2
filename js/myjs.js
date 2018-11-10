@@ -59,6 +59,10 @@ btnSubmit.onclick = function () {
         content+='email nguoi dung'+txtEmail.value+'<br>';
         a=true;
     }
+    var gender = document.forms[0]["gender"].value;
+    var sothich = document.forms[0]["a"].value;
+    content+=gender;
+    content+=sothich;
     if (a===true){
         document.getElementsByClassName('text2')[0].innerHTML=content;
     }

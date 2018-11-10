@@ -20,7 +20,7 @@ btnSubmit.onclick = function () {
         msgUsername.classList.remove("danger-text");
         msgUsername.classList.add("success-text");
         msgUsername.classList.remove("hidden-text");
-        content += 'ten nguoi dung:' + txtusername.value + '<br>';
+        content += '<label>Tên người dùng:</label>' + txtusername.value + '<br>';
         e = true;
     }
     var txtpassword = document.forms[0]["phone"];
@@ -35,7 +35,7 @@ btnSubmit.onclick = function () {
         msgpassword.classList.remove("danger-text");
         msgpassword.classList.add("success-text");
         msgpassword.classList.remove("hidden-text");
-        content += 'sdt nguoi dung:' + txtpassword.value + '<br>';
+        content += '<label>Số điện thoại:</label>' + txtpassword.value + '<br>';
         b = true;
     }
     var txtEmail = document.forms[0]["email"];
@@ -58,7 +58,7 @@ btnSubmit.onclick = function () {
         msgEmail.classList.remove("danger-text");
         msgEmail.classList.add("success-text");
         msgEmail.classList.remove("hidden-text");
-        content += 'email nguoi dung' + txtEmail.value + '<br>';
+        content += '<label>Email người dùng:</label>' + txtEmail.value + '<br>';
         c = true;
     }
     var gender = document.forms[0]["gender"].value;
@@ -71,10 +71,13 @@ txtsothich += d.value + ' ';
 }
 var goithieu = document.forms[0]["textarea"].value;
 
-content += 'gender:' + gender + '<br>';
-content += 'so thich:' + txtsothich + '<br>';
-content += 'gioi thieu:' + goithieu + '<br>';
+content += '<label>Gender:</label>' + gender + '<br>';
+content += '<label>Sở Thích:</label>' + txtsothich + '<br>';
+content += '<label>Giới Thiệu:</label>' + goithieu + '<br>';
 if (e === true && b === true && c === true) {
     document.getElementsByClassName('text2')[0].innerHTML = content;
+}
+if(window.onload){
+    content='';
 }
 };

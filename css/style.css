@@ -1,3 +1,7 @@
+body{
+    margin: 0;
+    padding: 0;
+}
 * {
     box-sizing: border-box;
 }
@@ -29,6 +33,7 @@
 .footer{
     height: 100px;
     background: #FF9966;
+    text-align: center;
 }
 .text1{
 }
@@ -71,7 +76,7 @@
 }
 label{
     display: inline-block;
-    width: 100px;
+    width: 200px;
 }
 .form-group{
     width: 500px;

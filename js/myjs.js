@@ -60,9 +60,17 @@ btnSubmit.onclick = function () {
         a=true;
     }
     var gender = document.forms[0]["gender"].value;
-    var sothich = document.forms[0]["a"].value;
-    content+=gender;
-    content+=sothich;
+    var sothich = document.forms[0]["a"];
+    for (const b of sothich) {
+        if (b.checked) {
+            sothich = b.value
+        }
+    }
+    var goithieu = document.forms[0]["textarea"].value;
+
+    content+='gender:'+gender+'<br>';
+    content+='so thich:'+sothich+'<br>';
+    content+='gioi thieu:'+goithieu+'<br>';
     if (a===true){
         document.getElementsByClassName('text2')[0].innerHTML=content;
     }
